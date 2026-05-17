@@ -124,7 +124,7 @@ function Problem() {
             <li><span className="problem-dot problem-dot--old" />Manual instructions</li>
             <li><span className="problem-dot problem-dot--old" />Operator confusion</li>
             <li><span className="problem-dot problem-dot--old" />Wrong prints</li>
-            <li><span className="problem-dot problem-dot--old" />Wasted time & money</li>
+            <li><span className="problem-dot problem-dot--old" />Wasted time</li>
           </ul>
         </div>
         <div className="problem-new animate-on-scroll">
@@ -135,7 +135,7 @@ function Problem() {
             <li><span className="problem-dot problem-dot--new" />Automated queue</li>
             <li><span className="problem-dot problem-dot--new" />One-click execution</li>
             <li><span className="problem-dot problem-dot--new" />Perfect prints</li>
-            <li><span className="problem-dot problem-dot--new" />Happy customers</li>
+            <li><span className="problem-dot problem-dot--new" />No waiting in queues</li>
           </ul>
         </div>
       </div>
