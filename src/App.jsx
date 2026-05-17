@@ -36,11 +36,11 @@ function Navbar() {
         Printr
       </a>
       <div className={`nav-links ${menuOpen ? 'nav-links--open' : ''}`}>
+        <a href="#contact" onClick={close}>Contact</a>
         <a href="#features" onClick={close}>Features</a>
         <a href="#architecture" onClick={close}>Architecture</a>
         <a href="#how-it-works" onClick={close}>How It Works</a>
         <a href="#tech-stack" onClick={close}>Tech Stack</a>
-        <a href="#contact" onClick={close}>Contact</a>
         <a href={DOWNLOAD_URL} className="nav-cta" download onClick={close}>Download APK</a>
       </div>
       {menuOpen && <div className="nav-overlay" onClick={close} />}

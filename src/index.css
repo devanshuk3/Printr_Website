@@ -203,18 +203,18 @@ img { max-width: 100%; display: block; }
 }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 0.6rem;
-  padding: 0.8rem 1.8rem; background: #fff; color: #000;
-  border-radius: 50px; font-weight: 700; font-size: 0.95rem;
+  padding: 0.65rem 1.5rem; background: #fff; color: #000;
+  border-radius: 50px; font-weight: 700; font-size: 0.85rem;
   transition: var(--transition); border: none; cursor: pointer;
   text-decoration: none; position: relative; overflow: hidden;
 }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(255,255,255,0.15); }
-.btn-primary .icon { font-size: 1.2rem; }
+.btn-primary .icon { font-size: 1.1rem; }
 .btn-secondary {
   display: inline-flex; align-items: center; gap: 0.6rem;
-  padding: 0.8rem 1.8rem; background: transparent;
+  padding: 0.65rem 1.5rem; background: transparent;
   border: 1px solid var(--border); color: var(--text);
-  border-radius: 50px; font-weight: 600; font-size: 0.95rem;
+  border-radius: 50px; font-weight: 600; font-size: 0.85rem;
   transition: var(--transition); cursor: pointer; text-decoration: none;
 }
 .btn-secondary:hover {
