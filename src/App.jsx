@@ -296,7 +296,7 @@ function TechStack() {
 
 const SECURITY = [
   { icon: 'https://cdn.simpleicons.org/jsonwebtokens/FFFFFF', title: 'JWT Authentication', desc: 'Secure token-based auth with role-based access control for every API endpoint.' },
-  { icon: 'https://cdn.simpleicons.org/twilio/F22F46', title: 'OTP Verification', desc: 'Email-based one-time passwords for account verification and secure registration.' },
+  { icon: 'https://api.iconify.design/lucide:mail-check.svg?color=%23ffffff', title: 'OTP Verification', desc: 'Email-based one-time passwords for account verification and secure registration.' },
   { icon: 'https://cdn.simpleicons.org/cloudflare/F38020', title: 'Rate Limiting', desc: 'Protection against brute-force and DoS attacks with intelligent request throttling.' },
   { icon: 'https://cdn.simpleicons.org/owasp/FFFFFF', title: 'Data Protection', desc: 'Parameterized queries, transactions, signed upload URLs, and encrypted data transfer.' },
 ]
