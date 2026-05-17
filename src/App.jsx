@@ -72,8 +72,9 @@ function Hero() {
           <br />Not Harder
         </h1>
         <p className="subtitle">
-          A distributed print automation platform that connects customers and local print vendors.
-          Upload files, set preferences, pay online — your prints are handled automatically.
+          Skip the queues, ditch the chaos. Printr connects you directly to local print vendors —
+          upload your files, set preferences, pay online, and your prints are handled automatically. No
+          more waiting in line.
         </p>
         <div className="hero-buttons">
           <a href={DOWNLOAD_URL} className="btn-primary" download>
@@ -86,16 +87,16 @@ function Hero() {
         </div>
         <div className="hero-stats">
           <div className="hero-stat">
-            <div className="number">100%</div>
-            <div className="label">Automated Workflow</div>
+            <div className="number">0</div>
+            <div className="label">Queues</div>
           </div>
           <div className="hero-stat">
-            <div className="number">0</div>
-            <div className="label">Manual Config Needed</div>
+            <div className="number">100%</div>
+            <div className="label">Automated</div>
           </div>
           <div className="hero-stat">
             <div className="number">1-Click</div>
-            <div className="label">Print Execution</div>
+            <div className="label">Print</div>
           </div>
         </div>
       </div>
@@ -196,7 +197,7 @@ function Architecture() {
       </div>
       <div className="arch-flow animate-on-scroll">
         {ARCH_STEPS.map((s, i) => (
-          <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
+          <div key={i} className="arch-step-wrapper">
             <div className="arch-step">
               <div className="arch-icon">{s.icon}</div>
               <span className="arch-step-label">{s.label}</span>
