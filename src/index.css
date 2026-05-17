@@ -160,8 +160,8 @@ img { max-width: 100%; display: block; }
 .hero-bg .grid-pattern {
   position: absolute; inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,0.13) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.13) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 .hero-bg .radial-glow {
@@ -619,12 +619,12 @@ img { max-width: 100%; display: block; }
 
   /* Hero Mobile */
   .hero { padding: 6.5rem 1.25rem 4rem; min-height: auto; }
-  .hero h1 { letter-spacing: -1.5px; font-size: clamp(2.2rem, 10vw, 3.2rem); }
+  .hero h1 { letter-spacing: -1.5px; font-size: clamp(2.8rem, 12vw, 3.8rem); }
   .hero .subtitle { font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem; }
   .hero-badge { font-size: 0.72rem; padding: 0.4rem 1rem; }
   .hero-buttons { gap: 0.75rem; }
-  .btn-primary { padding: 0.9rem 1.8rem; font-size: 0.95rem; width: 100%; justify-content: center; }
-  .btn-secondary { padding: 0.9rem 1.8rem; font-size: 0.95rem; width: 100%; justify-content: center; }
+  .btn-primary { padding: 0.7rem 1.4rem; font-size: 0.85rem; width: 100%; justify-content: center; }
+  .btn-secondary { padding: 0.7rem 1.4rem; font-size: 0.85rem; width: 100%; justify-content: center; }
   .hero-stats { gap: 1.5rem; margin-top: 3rem; }
   .hero-stat .number { font-size: 1.5rem; }
   .hero-stat .label { font-size: 0.72rem; }
@@ -694,7 +694,7 @@ img { max-width: 100%; display: block; }
 /* -- Small Phones -- */
 @media (max-width: 400px) {
   .hero { padding: 6rem 1rem 3rem; }
-  .hero h1 { font-size: 2rem; letter-spacing: -1px; }
+  .hero h1 { font-size: 2.4rem; letter-spacing: -1px; }
   .hero .subtitle { font-size: 0.88rem; }
   .hero-stats { flex-direction: column; gap: 1.25rem; }
   .hero-buttons { flex-direction: column; align-items: stretch; }
