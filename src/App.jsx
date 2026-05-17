@@ -260,14 +260,14 @@ function HowItWorks() {
 }
 
 const TECH = [
-  { emoji: '⚛️', name: 'React Native', desc: 'Mobile App' },
-  { emoji: '🟢', name: 'Node.js', desc: 'Backend API' },
-  { emoji: '🐘', name: 'PostgreSQL', desc: 'Database' },
-  { emoji: '⚡', name: 'Electron', desc: 'Desktop Agent' },
-  { emoji: '🔐', name: 'JWT + OTP', desc: 'Authentication' },
-  { emoji: '☁️', name: 'Cloud Storage', desc: 'File Hosting' },
-  { emoji: '🛡️', name: 'Helmet + CORS', desc: 'Security Layer' },
-  { emoji: '📨', name: 'Express', desc: 'API Framework' },
+  { logo: 'https://cdn.simpleicons.org/react/61DAFB', name: 'React Native', desc: 'Mobile App' },
+  { logo: 'https://cdn.simpleicons.org/nodedotjs/5FA04E', name: 'Node.js', desc: 'Backend API' },
+  { logo: 'https://cdn.simpleicons.org/postgresql/4169E1', name: 'PostgreSQL', desc: 'Database' },
+  { logo: 'https://cdn.simpleicons.org/electron/47848F', name: 'Electron', desc: 'Desktop Agent' },
+  { logo: 'https://cdn.simpleicons.org/jsonwebtokens/FFFFFF', name: 'JWT + OTP', desc: 'Authentication' },
+  { logo: 'https://cdn.simpleicons.org/cloudflare/F38020', name: 'Cloud Storage', desc: 'File Hosting' },
+  { logo: 'https://cdn.simpleicons.org/owasp/FFFFFF', name: 'Helmet + CORS', desc: 'Security Layer' },
+  { logo: 'https://cdn.simpleicons.org/express/FFFFFF', name: 'Express', desc: 'API Framework' },
 ]
 
 function TechStack() {
@@ -284,7 +284,7 @@ function TechStack() {
       <div className="tech-grid">
         {TECH.map((t, i) => (
           <div className="tech-card animate-on-scroll" key={i} style={{ transitionDelay: `${i * 0.08}s` }}>
-            <div className="tech-emoji">{t.emoji}</div>
+            <img src={t.logo} alt={t.name} style={{ width: '44px', height: '44px', margin: '0 auto 1rem', display: 'block' }} />
             <h4>{t.name}</h4>
             <p>{t.desc}</p>
           </div>
