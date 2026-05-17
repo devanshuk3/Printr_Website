@@ -18,26 +18,37 @@ function useScrollAnimation() {
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 50)
     window.addEventListener('scroll', handler)
     return () => window.removeEventListener('scroll', handler)
   }, [])
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
+  const close = () => setMenuOpen(false)
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <a href="#" className="navbar-brand">
         <div className="logo-icon">P</div>
         Printr
       </a>
-      <div className="nav-links">
-        <a href="#features">Features</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#tech-stack">Tech Stack</a>
-        <a href="#contact">Contact</a>
-        <a href={DOWNLOAD_URL} className="nav-cta" download>Download APK</a>
+      <div className={`nav-links ${menuOpen ? 'nav-links--open' : ''}`}>
+        <a href="#features" onClick={close}>Features</a>
+        <a href="#architecture" onClick={close}>Architecture</a>
+        <a href="#how-it-works" onClick={close}>How It Works</a>
+        <a href="#tech-stack" onClick={close}>Tech Stack</a>
+        <a href="#contact" onClick={close}>Contact</a>
+        <a href={DOWNLOAD_URL} className="nav-cta" download onClick={close}>Download APK</a>
       </div>
-      <button className="mobile-menu-btn" aria-label="Menu">
+      {menuOpen && <div className="nav-overlay" onClick={close} />}
+      <button
+        className={`mobile-menu-btn ${menuOpen ? 'mobile-menu-btn--open' : ''}`}
+        aria-label="Menu"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
         <span /><span /><span />
       </button>
     </nav>
@@ -105,26 +116,26 @@ function Problem() {
       </div>
       <div className="problem-grid">
         <div className="problem-old animate-on-scroll">
-          <div className="problem-icon">❌</div>
+          <div className="problem-tag problem-tag--old">Before</div>
           <h3 className="problem-title">Traditional Workflow</h3>
-          <div className="problem-flow">
-            WhatsApp message <span className="arrow">→</span><br />
-            Manual instructions <span className="arrow">→</span><br />
-            Operator confusion <span className="arrow">→</span><br />
-            Wrong prints <span className="arrow">→</span><br />
-            Wasted time & money
-          </div>
+          <ul className="problem-list">
+            <li><span className="problem-dot problem-dot--old" />WhatsApp message</li>
+            <li><span className="problem-dot problem-dot--old" />Manual instructions</li>
+            <li><span className="problem-dot problem-dot--old" />Operator confusion</li>
+            <li><span className="problem-dot problem-dot--old" />Wrong prints</li>
+            <li><span className="problem-dot problem-dot--old" />Wasted time & money</li>
+          </ul>
         </div>
         <div className="problem-new animate-on-scroll">
-          <div className="problem-icon">✅</div>
+          <div className="problem-tag problem-tag--new">After</div>
           <h3 className="problem-title">Printr Workflow</h3>
-          <div className="problem-flow">
-            Structured preferences <span className="arrow">→</span><br />
-            Automated queue <span className="arrow">→</span><br />
-            One-click execution <span className="arrow">→</span><br />
-            Perfect prints <span className="arrow">→</span><br />
-            Happy customers
-          </div>
+          <ul className="problem-list">
+            <li><span className="problem-dot problem-dot--new" />Structured preferences</li>
+            <li><span className="problem-dot problem-dot--new" />Automated queue</li>
+            <li><span className="problem-dot problem-dot--new" />One-click execution</li>
+            <li><span className="problem-dot problem-dot--new" />Perfect prints</li>
+            <li><span className="problem-dot problem-dot--new" />Happy customers</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -404,6 +415,8 @@ export default function App() {
       <Navbar />
       <Hero />
       <div className="section-divider" />
+      <Contact />
+      <div className="section-divider" />
       <Problem />
       <div className="section-divider" />
       <Features />
@@ -415,8 +428,6 @@ export default function App() {
       <TechStack />
       <div className="section-divider" />
       <Security />
-      <div className="section-divider" />
-      <Contact />
       <div className="section-divider" />
       <CTA />
       <Footer />
