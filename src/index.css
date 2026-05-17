@@ -160,8 +160,8 @@ img { max-width: 100%; display: block; }
 .hero-bg .grid-pattern {
   position: absolute; inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.13) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 .hero-bg .radial-glow {
@@ -183,7 +183,7 @@ img { max-width: 100%; display: block; }
 }
 .hero h1 {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 900;
+  font-size: clamp(3.5rem, 9vw, 6rem); font-weight: 900;
   line-height: 1.05; letter-spacing: -3px; margin-bottom: 1.5rem;
   animation: fadeInUp 0.8s ease 0.2s both;
 }
@@ -203,8 +203,8 @@ img { max-width: 100%; display: block; }
 }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 0.6rem;
-  padding: 1rem 2.2rem; background: #fff; color: #000;
-  border-radius: 50px; font-weight: 700; font-size: 1rem;
+  padding: 0.8rem 1.8rem; background: #fff; color: #000;
+  border-radius: 50px; font-weight: 700; font-size: 0.95rem;
   transition: var(--transition); border: none; cursor: pointer;
   text-decoration: none; position: relative; overflow: hidden;
 }
@@ -212,9 +212,9 @@ img { max-width: 100%; display: block; }
 .btn-primary .icon { font-size: 1.2rem; }
 .btn-secondary {
   display: inline-flex; align-items: center; gap: 0.6rem;
-  padding: 1rem 2.2rem; background: transparent;
+  padding: 0.8rem 1.8rem; background: transparent;
   border: 1px solid var(--border); color: var(--text);
-  border-radius: 50px; font-weight: 600; font-size: 1rem;
+  border-radius: 50px; font-weight: 600; font-size: 0.95rem;
   transition: var(--transition); cursor: pointer; text-decoration: none;
 }
 .btn-secondary:hover {
