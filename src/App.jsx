@@ -144,12 +144,12 @@ function Problem() {
 }
 
 const FEATURES = [
-  { icon: 'https://cdn.simpleicons.org/adobeacrobat/EC1C24', title: 'Smart File Upload', desc: 'Upload PDFs, images, and printable documents directly from your phone with automatic format validation.' },
-  { icon: 'https://cdn.simpleicons.org/canva/00C4CC', title: 'Print Preferences', desc: 'Color/BW, duplex, copies, orientation, paper size, page ranges, and binding — all configurable in-app.' },
-  { icon: 'https://cdn.simpleicons.org/stripe/008CDD', title: 'Flexible Payments', desc: 'Pay online securely or choose Cash on Delivery. Complete payment integration for seamless transactions.' },
-  { icon: 'https://cdn.simpleicons.org/electron/47848F', title: 'One-Click Printing', desc: 'Vendors click print once. The system automatically downloads, configures, and sends the job to the printer.' },
-  { icon: 'https://cdn.simpleicons.org/rabbitmq/FF6600', title: 'Live Queue Management', desc: 'Real-time order tracking with status updates. Vendors manage their print queue from an intuitive dashboard.' },
-  { icon: 'https://cdn.simpleicons.org/auth0/EB5424', title: 'Enterprise Security', desc: 'JWT authentication, OTP verification, rate limiting, Helmet protection, and parameterized database queries.' },
+  { icon: '📄', title: 'Smart File Upload', desc: 'Upload PDFs, images, and printable documents directly from your phone with automatic format validation.' },
+  { icon: '🎨', title: 'Print Preferences', desc: 'Color/BW, duplex, copies, orientation, paper size, page ranges, and binding — all configurable in-app.' },
+  { icon: '💳', title: 'Flexible Payments', desc: 'Pay online securely or choose Cash on Delivery. Complete payment integration for seamless transactions.' },
+  { icon: '🖨️', title: 'One-Click Printing', desc: 'Vendors click print once. The system automatically downloads, configures, and sends the job to the printer.' },
+  { icon: '📊', title: 'Live Queue Management', desc: 'Real-time order tracking with status updates. Vendors manage their print queue from an intuitive dashboard.' },
+  { icon: '🔒', title: 'Enterprise Security', desc: 'JWT authentication, OTP verification, rate limiting, Helmet protection, and parameterized database queries.' },
 ]
 
 function Features() {
@@ -166,7 +166,7 @@ function Features() {
       <div className="features-grid">
         {FEATURES.map((f, i) => (
           <div className="feature-card animate-on-scroll" key={i} style={{ transitionDelay: `${i * 0.1}s` }}>
-            <img src={f.icon} alt={f.title} style={{ width: '44px', height: '44px', margin: '0 auto 1rem', display: 'block' }} />
+            <div className="feature-icon">{f.icon}</div>
             <h3>{f.title}</h3>
             <p>{f.desc}</p>
           </div>
