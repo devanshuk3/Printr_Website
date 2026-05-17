@@ -144,12 +144,12 @@ function Problem() {
 }
 
 const FEATURES = [
-  { icon: '📄', title: 'Smart File Upload', desc: 'Upload PDFs, images, and printable documents directly from your phone with automatic format validation.' },
-  { icon: '🎨', title: 'Print Preferences', desc: 'Color/BW, duplex, copies, orientation, paper size, page ranges, and binding — all configurable in-app.' },
-  { icon: '💳', title: 'Flexible Payments', desc: 'Pay online securely or choose Cash on Delivery. Complete payment integration for seamless transactions.' },
-  { icon: '🖨️', title: 'One-Click Printing', desc: 'Vendors click print once. The system automatically downloads, configures, and sends the job to the printer.' },
-  { icon: '📊', title: 'Live Queue Management', desc: 'Real-time order tracking with status updates. Vendors manage their print queue from an intuitive dashboard.' },
-  { icon: '🔒', title: 'Enterprise Security', desc: 'JWT authentication, OTP verification, rate limiting, Helmet protection, and parameterized database queries.' },
+  { icon: 'https://cdn.simpleicons.org/adobeacrobat/EC1C24', title: 'Smart File Upload', desc: 'Upload PDFs, images, and printable documents directly from your phone with automatic format validation.' },
+  { icon: 'https://cdn.simpleicons.org/canva/00C4CC', title: 'Print Preferences', desc: 'Color/BW, duplex, copies, orientation, paper size, page ranges, and binding — all configurable in-app.' },
+  { icon: 'https://cdn.simpleicons.org/stripe/008CDD', title: 'Flexible Payments', desc: 'Pay online securely or choose Cash on Delivery. Complete payment integration for seamless transactions.' },
+  { icon: 'https://cdn.simpleicons.org/electron/47848F', title: 'One-Click Printing', desc: 'Vendors click print once. The system automatically downloads, configures, and sends the job to the printer.' },
+  { icon: 'https://cdn.simpleicons.org/rabbitmq/FF6600', title: 'Live Queue Management', desc: 'Real-time order tracking with status updates. Vendors manage their print queue from an intuitive dashboard.' },
+  { icon: 'https://cdn.simpleicons.org/auth0/EB5424', title: 'Enterprise Security', desc: 'JWT authentication, OTP verification, rate limiting, Helmet protection, and parameterized database queries.' },
 ]
 
 function Features() {
@@ -166,7 +166,7 @@ function Features() {
       <div className="features-grid">
         {FEATURES.map((f, i) => (
           <div className="feature-card animate-on-scroll" key={i} style={{ transitionDelay: `${i * 0.1}s` }}>
-            <div className="feature-icon">{f.icon}</div>
+            <img src={f.icon} alt={f.title} style={{ width: '44px', height: '44px', margin: '0 auto 1rem', display: 'block' }} />
             <h3>{f.title}</h3>
             <p>{f.desc}</p>
           </div>
@@ -177,11 +177,11 @@ function Features() {
 }
 
 const ARCH_STEPS = [
-  { icon: '📱', label: 'Mobile App' },
-  { icon: '⚡', label: 'Backend API' },
-  { icon: '🖥️', label: 'Dashboard' },
-  { icon: '🔌', label: 'Electron Agent' },
-  { icon: '🖨️', label: 'Printer' },
+  { icon: 'https://cdn.simpleicons.org/android/3DDC84', label: 'Mobile App' },
+  { icon: 'https://cdn.simpleicons.org/nodedotjs/5FA04E', label: 'Backend API' },
+  { icon: 'https://cdn.simpleicons.org/react/61DAFB', label: 'Dashboard' },
+  { icon: 'https://cdn.simpleicons.org/electron/47848F', label: 'Electron Agent' },
+  { icon: 'https://cdn.simpleicons.org/hp/0096D6', label: 'Printer' },
 ]
 
 function Architecture() {
@@ -199,7 +199,7 @@ function Architecture() {
         {ARCH_STEPS.map((s, i) => (
           <div key={i} className="arch-step-wrapper">
             <div className="arch-step">
-              <div className="arch-icon">{s.icon}</div>
+              <img src={s.icon} alt={s.label} style={{ width: '44px', height: '44px', margin: '0 auto 1rem', display: 'block' }} />
               <span className="arch-step-label">{s.label}</span>
             </div>
             {i < ARCH_STEPS.length - 1 && <span className="arch-arrow">→</span>}
@@ -295,10 +295,10 @@ function TechStack() {
 }
 
 const SECURITY = [
-  { icon: '🔑', title: 'JWT Authentication', desc: 'Secure token-based auth with role-based access control for every API endpoint.' },
-  { icon: '📧', title: 'OTP Verification', desc: 'Email-based one-time passwords for account verification and secure registration.' },
-  { icon: '🛡️', title: 'Rate Limiting', desc: 'Protection against brute-force and DoS attacks with intelligent request throttling.' },
-  { icon: '🔒', title: 'Data Protection', desc: 'Parameterized queries, transactions, signed upload URLs, and encrypted data transfer.' },
+  { icon: 'https://cdn.simpleicons.org/jsonwebtokens/FFFFFF', title: 'JWT Authentication', desc: 'Secure token-based auth with role-based access control for every API endpoint.' },
+  { icon: 'https://cdn.simpleicons.org/twilio/F22F46', title: 'OTP Verification', desc: 'Email-based one-time passwords for account verification and secure registration.' },
+  { icon: 'https://cdn.simpleicons.org/cloudflare/F38020', title: 'Rate Limiting', desc: 'Protection against brute-force and DoS attacks with intelligent request throttling.' },
+  { icon: 'https://cdn.simpleicons.org/owasp/FFFFFF', title: 'Data Protection', desc: 'Parameterized queries, transactions, signed upload URLs, and encrypted data transfer.' },
 ]
 
 function Security() {
@@ -315,7 +315,7 @@ function Security() {
       <div className="security-grid">
         {SECURITY.map((s, i) => (
           <div className="security-card animate-on-scroll" key={i} style={{ transitionDelay: `${i * 0.1}s` }}>
-            <div className="security-icon">{s.icon}</div>
+            <img src={s.icon} alt={s.title} style={{ width: '44px', height: '44px', margin: '0 auto 1rem', display: 'block' }} />
             <div><h4>{s.title}</h4><p>{s.desc}</p></div>
           </div>
         ))}
@@ -353,7 +353,7 @@ function Contact() {
       </div>
       <div className="contact-grid">
         <div className="contact-card animate-on-scroll" style={{ transitionDelay: '0s' }}>
-          <div className="contact-icon">💬</div>
+          <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" style={{ width: '44px', height: '44px', margin: '0 auto 1rem', display: 'block' }} />
           <h3>WhatsApp</h3>
           <p>Quick support via WhatsApp. Reach out for bugs, questions, or feedback.</p>
           <a
@@ -366,7 +366,7 @@ function Contact() {
           </a>
         </div>
         <div className="contact-card animate-on-scroll" style={{ transitionDelay: '0.1s' }}>
-          <div className="contact-icon">🐙</div>
+          <img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub" style={{ width: '44px', height: '44px', margin: '0 auto 1rem', display: 'block' }} />
           <h3>GitHub</h3>
           <p>Open an issue, contribute, or explore the source code on GitHub.</p>
           <a
@@ -379,7 +379,7 @@ function Contact() {
           </a>
         </div>
         <div className="contact-card animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
-          <div className="contact-icon">✉️</div>
+          <img src="https://cdn.simpleicons.org/gmail/EA4335" alt="Email" style={{ width: '44px', height: '44px', margin: '0 auto 1rem', display: 'block' }} />
           <h3>Email Support</h3>
           <p>Send detailed bug reports or feature requests to the Printr support team.</p>
           <a
