@@ -181,7 +181,7 @@ const ARCH_STEPS = [
   { icon: 'https://cdn.simpleicons.org/nodedotjs/5FA04E', label: 'Backend API' },
   { icon: 'https://cdn.simpleicons.org/react/61DAFB', label: 'Dashboard' },
   { icon: 'https://cdn.simpleicons.org/electron/47848F', label: 'Electron Agent' },
-  { icon: 'https://cdn.simpleicons.org/hp/0096D6', label: 'Printer' },
+  { icon: 'https://api.iconify.design/lucide:printer.svg?color=%23ffffff', label: 'Printer' },
 ]
 
 function Architecture() {
