@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 
-const DOWNLOAD_URL = 'https://github.com/devanshuk3/Deployements/releases/download/v1.0/Printr.apk'
+const DOWNLOAD_URL = 'https://github.com/devanshuk3/Deployements/releases/download/v1.1/Printr.apk'
 const DESKTOP_DOWNLOAD_URL = 'https://github.com/devanshuk3/Deployements/releases/download/v1.1/Printr-Desktop.exe'
 
 function useScrollAnimation() {
@@ -365,7 +365,7 @@ function CTA() {
           <span className="download-icon">⬇</span>
           Download Printr APK
         </a>
-        <p className="cta-note">Android • Free • v1.0</p>
+        <p className="cta-note">Android • Free • v1.1</p>
       </div>
     </section>
   )
