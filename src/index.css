@@ -137,7 +137,14 @@ img { max-width: 100%; display: block; }
   transition: var(--transition); border: 2px solid #fff; cursor: pointer;
   text-decoration: none;
 }
-.nav-links a.nav-cta:hover { background: #000; color: #fff; transform: scale(1.05); }
+.nav-links a.nav-cta::after {
+  display: none;
+}
+.nav-links a.nav-cta:hover {
+  background: transparent; color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
 
 .mobile-menu-btn {
   display: none; background: none; border: none; cursor: pointer;
