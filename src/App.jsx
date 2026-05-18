@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
 const DOWNLOAD_URL = 'https://github.com/devanshuk3/Deployements/releases/download/v1.0/Printr.apk'
+const DESKTOP_DOWNLOAD_URL = 'https://github.com/devanshuk3/Deployements/releases/download/v1.1/Printr-Desktop.exe'
 
 function useScrollAnimation() {
   const ref = useRef(null)
@@ -38,6 +39,7 @@ function Navbar() {
       <div className={`nav-links ${menuOpen ? 'nav-links--open' : ''}`}>
         <a href="#contact" onClick={close}>Contact</a>
         <a href="#features" onClick={close}>Features</a>
+        <a href="#vendor-app" onClick={close}>For Vendors</a>
         <a href="#architecture" onClick={close}>Architecture</a>
         <a href="#how-it-works" onClick={close}>How It Works</a>
         <a href="#tech-stack" onClick={close}>Tech Stack</a>
@@ -171,6 +173,35 @@ function Features() {
             <p>{f.desc}</p>
           </div>
         ))}
+      </div>
+    </section>
+  )
+}
+
+function VendorApp() {
+  const ref = useScrollAnimation()
+  return (
+    <section className="section" id="vendor-app" ref={ref}>
+      <div className="section-header animate-on-scroll">
+        <p className="section-label">// For Vendors</p>
+        <h2 className="section-title">Printr Desktop Agent</h2>
+        <p className="section-subtitle">
+          Streamline your shop's workflow with our dedicated Windows application. It enables seamless one-click printing by automatically applying customer preferences, so you never have to manually configure print settings again.
+        </p>
+      </div>
+      <div className="animate-on-scroll" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'var(--bg-card)', padding: '4rem 2rem', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
+        <img src="https://cdn.simpleicons.org/electron/47848F" alt="Windows" style={{ width: '64px', height: '64px', marginBottom: '1.5rem' }} />
+        <h3 style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>Download Printr for Windows</h3>
+        <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', textAlign: 'center', maxWidth: '500px' }}>
+          Get the desktop agent to connect your local printers to the Printr network and start accepting automated print jobs instantly.
+        </p>
+        <a href={DESKTOP_DOWNLOAD_URL} className="btn-primary" download>
+          <span className="icon" style={{ display: 'flex', alignItems: 'center' }}>
+             <img src="https://api.iconify.design/lucide:download.svg?color=%23000000" alt="Download" style={{ width: '20px', height: '20px' }} />
+          </span>
+          Download .exe
+        </a>
+        <p className="cta-note" style={{ marginTop: '1rem', fontSize: '0.85rem', color: 'var(--text-dim)' }}>Requires Windows 10/11 • Free • v1.1</p>
       </div>
     </section>
   )
@@ -401,6 +432,7 @@ function Footer() {
         <p>© {new Date().getFullYear()} Printr. All rights reserved.</p>
         <div className="footer-links">
           <a href="#features">Features</a>
+          <a href="#vendor-app">Vendors</a>
           <a href="#contact">Contact</a>
           <a href="https://github.com/devanshuk3" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="mailto:support.printr@gmail.com">Email</a>
@@ -421,6 +453,8 @@ export default function App() {
       <Problem />
       <div className="section-divider" />
       <Features />
+      <div className="section-divider" />
+      <VendorApp />
       <div className="section-divider" />
       <Architecture />
       <div className="section-divider" />
